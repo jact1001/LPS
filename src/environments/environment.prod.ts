@@ -1,3 +1,8 @@
 export const environment = {
-  production: true
+  production: true,
+  configOne: {
+    encuesta: true,
+    cloud: true,
+    answers: false
+  }
 };

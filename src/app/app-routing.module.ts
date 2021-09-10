@@ -22,10 +22,19 @@ if (environment.configOne.encuesta) {
   );
 }
 
+if (environment.configOne.answers) {
+  children.push(
+    {
+      path: 'preguntas',
+      loadChildren: () => import('../app/pages/answers/answers.module').then((mod) => mod.AnswersModule)
+    }
+  );
+}
+
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: HomeComponent, 
     children
   },
   { path: '', redirectTo: '', pathMatch: 'full'},
