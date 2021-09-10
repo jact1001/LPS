@@ -21,7 +21,6 @@ if (environment.configOne.encuesta) {
     }
   );
 }
-
 if (environment.configOne.answers) {
   children.push(
     {
@@ -34,7 +33,7 @@ if (environment.configOne.answers) {
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent, 
+    component: HomeComponent,
     children
   },
   { path: '', redirectTo: '', pathMatch: 'full'},

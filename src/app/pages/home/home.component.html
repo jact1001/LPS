@@ -1,6 +1,22 @@
-<div class="card-body ">
-    <h5 class="card-title">Home works!</h5>
-    <p class="card-text">"Esto es un feature".</p>
-    <a href="#" class="btn btn-primary">Feature Core</a>
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row justify-content-end">
+        <div class="col-8 mt-2 h-100">
+            <app-central-panel></app-central-panel>
+        </div>
+        <div class="col-4 mt-2 h-100">
+            <app-left-panel>
+                <div class="card-body home">
+                    <a *ngIf="pollIsActive" href="#" class="btn btn-primary" [routerLink]="['/encuesta']">Encuesta</a>
+                    <a *ngIf="cloudIsActive" href="#" class="btn btn-primary" [routerLink]="['/nube']">Nube de palabras</a>
+                    <a *ngIf="answersIsActive" href="#" class="btn btn-primary" [routerLink]="['/preguntas']">Preguntas y respuestas</a>
+                </div>
+                <router-outlet></router-outlet>
+            </app-left-panel>
+        </div>
+    </div>
 </div>
-<router-outlet></router-outlet>
+
+
+
+
