@@ -29,11 +29,79 @@
             "scripts": []
           },
           "configurations": {
-            "production": {
+            "one": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "./src/environments/environment.ts",
+                  "with": "./src/environments/environment.one.ts"
+                },
+                {
+                  "replace": "./src/app/pages/home/home.component.html",
+                  "with": "./src/app/pages/home/homeone.component.html"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "two": {
+              "fileReplacements": [
+                {
+                  "replace": "./src/environments/environment.ts",
+                  "with": "./src/environments/environment.two.ts"
+                },
+                {
+                  "replace": "./src/app/pages/home/home.component.html",
+                  "with": "./src/app/pages/home/hometwo.component.html"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "three": {
+              "fileReplacements": [
+                {
+                  "replace": "./src/environments/environment.ts",
+                  "with": "./src/environments/environment.three.ts"
+                },
+                {
+                  "replace": "./src/app/pages/home/home.component.html",
+                  "with": "./src/app/pages/home/homethree.component.html"
                 }
               ],
               "optimization": true,
@@ -65,8 +133,14 @@
             "browserTarget": "splsoft:build"
           },
           "configurations": {
-            "production": {
-              "browserTarget": "splsoft:build:production"
+            "one": {
+              "browserTarget": "splsoft:build:one"
+            },
+            "two": {
+              "browserTarget": "splsoft:build:two"
+            },
+            "three": {
+              "browserTarget": "splsoft:build:three"
             }
           }
         },
@@ -113,8 +187,14 @@
             "devServerTarget": "splsoft:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "splsoft:serve:production"
+            "one": {
+              "devServerTarget": "splsoft:serve:one"
+            },
+            "two": {
+              "devServerTarget": "splsoft:serve:two"
+            },
+            "three": {
+              "devServerTarget": "splsoft:serve:three"
             }
           }
         }
