@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-/*import { HomeOneComponent } from './pages/homeone/homeone.component';
-import { HomeTwoComponent } from './pages/hometwo/hometwo.component';
-import { HomeThreeComponent } from './pages/homethree/homethree.component';*/
 import { HomeComponent } from './pages/home/home.component';
 
 const children = [
@@ -22,21 +19,6 @@ const children = [
 ];
 
 const routes: Routes = [
-  /*{
-    path: '',
-    component: HomeOneComponent,
-    children
-  },
-  {
-    path: '',
-    component: HomeTwoComponent,
-    children
-  },
-  {
-    path: '',
-    component: HomeThreeComponent,
-    children
-  },*/
   {
     path: '',
     component: HomeComponent,

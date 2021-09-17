@@ -34,6 +34,10 @@
                 {
                   "replace": "./src/environments/environment.ts",
                   "with": "./src/environments/environment.one.ts"
+                },
+                {
+                  "replace": "./src/app/pages/home/home.component.html",
+                  "with": "./src/app/pages/home/homeone.component.html"
                 }
               ],
               "optimization": true,
@@ -62,6 +66,10 @@
                 {
                   "replace": "./src/environments/environment.ts",
                   "with": "./src/environments/environment.two.ts"
+                },
+                {
+                  "replace": "./src/app/pages/home/home.component.html",
+                  "with": "./src/app/pages/home/hometwo.component.html"
                 }
               ],
               "optimization": true,
@@ -90,6 +98,10 @@
                 {
                   "replace": "./src/environments/environment.ts",
                   "with": "./src/environments/environment.three.ts"
+                },
+                {
+                  "replace": "./src/app/pages/home/home.component.html",
+                  "with": "./src/app/pages/home/homethree.component.html"
                 }
               ],
               "optimization": true,
