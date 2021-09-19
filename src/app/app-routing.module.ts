@@ -1,27 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { HomeComponent } from './pages/home/home.component';
+import {FactoryComponent} from './factory/factory.component';
 
 const children = [
     {
       path: 'nube',
-      loadChildren: () => import('../app/pages/cloud/cloud.module').then((mod) => mod.CloudModule)
+      loadChildren: () => import('./features/cloud/cloud.module').then((mod) => mod.CloudModule)
     },
     {
       path: 'encuesta',
-      loadChildren: () => import('../app/pages/poll/poll.module').then((mod) => mod.PollModule)
+      loadChildren: () => import('./features/poll/poll.module').then((mod) => mod.PollModule)
     },
     {
       path: 'preguntas',
-      loadChildren: () => import('../app/pages/answers/answers.module').then((mod) => mod.AnswersModule)
+      loadChildren: () => import('./features/answers/answers.module').then((mod) => mod.AnswersModule)
     }
 ];
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: FactoryComponent,
     children
   },
   { path: '', redirectTo: '', pathMatch: 'full'},

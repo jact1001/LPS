@@ -32,24 +32,24 @@
             "one": {
               "fileReplacements": [
                 {
-                  "replace": "./src/app/pages/home/home.component.html",
-                  "with": "./src/app/pages/home/template.homeone.html"
+                  "replace": "./src/app/factory/factory.component.html",
+                  "with": "./src/app/factory/products/product.one.html"
                 }
               ]
             },
             "two": {
               "fileReplacements": [
                 {
-                  "replace": "./src/app/pages/home/home.component.html",
-                  "with": "./src/app/pages/home/template.hometwo.html"
+                  "replace": "./src/app/factory/factory.component.html",
+                  "with": "./src/app/factory/products/product.two.html"
                 }
               ]
             },
             "three": {
               "fileReplacements": [
                 {
-                  "replace": "./src/app/pages/home/home.component.html",
-                  "with": "./src/app/pages/home/template.homethree.html"
+                  "replace": "./src/app/factory/factory.component.html",
+                  "with": "./src/app/factory/products/product.three.html"
                 }
               ]
             },
