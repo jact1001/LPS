@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Store} from '@ngrx/store';
+import {ISlidesState} from '../../store/slide.reducer';
+import {addSlideToList} from '../../store/slide.actions';
 
 @Component({
   selector: 'app-answers',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnswersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<ISlidesState>) { }
 
   ngOnInit(): void {
+    this.onCreateMessage();
   }
 
+  onCreateMessage(): void {
+    this.store.dispatch(addSlideToList({ slide: {nombre: 'prueba'} }));
+  }
 }

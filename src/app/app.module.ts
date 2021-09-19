@@ -7,6 +7,8 @@ import { CentralPanelComponent } from './components/shared/central-panel/central
 import { LeftPanelComponent } from './components/shared/left-panel/left-panel.component';
 import { FactoryComponent } from './factory/factory.component';
 import { ContainerComponent } from './components/shared/container/container.component';
+import { StoreModule } from '@ngrx/store';
+import { slideReducer } from './store/slide.reducer';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ContainerComponent } from './components/shared/container/container.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({slides: slideReducer}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
