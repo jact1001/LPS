@@ -7,9 +7,7 @@
         <div class="col-4 mt-2 h-100">
             <app-left-panel>
                 <div class="card-body home">
-                    <a *ngIf="pollIsActive" href="#" class="btn btn-primary" [routerLink]="['/encuesta']">Encuesta</a>
-                    <a *ngIf="cloudIsActive" href="#" class="btn btn-primary" [routerLink]="['/nube']">Nube de palabras</a>
-                    <a *ngIf="answersIsActive" href="#" class="btn btn-primary" [routerLink]="['/preguntas']">Preguntas y respuestas</a>
+                    <a href="#" class="btn btn-primary" [routerLink]="['/poll']">Encuesta</a>
                 </div>
                 <router-outlet></router-outlet>
             </app-left-panel>

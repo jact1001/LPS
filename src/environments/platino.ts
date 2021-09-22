@@ -4,7 +4,12 @@
 
 export const environment = {
   production: true,
-  features: ['poll']
+  configOne: {
+    encuesta: true,
+    cloud: true,
+    answers: true
+  },
+  features: ['poll', 'cloud']
 };
 
 /*

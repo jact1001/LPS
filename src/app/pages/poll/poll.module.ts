@@ -10,4 +10,4 @@ import {PollRoutingModule} from './poll-routing.module';
     PollRoutingModule
   ]
 })
-export class PollModule { }
+export class FeatureModule { }
