@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {select, Store} from '@ngrx/store';
+import {Store} from '@ngrx/store';
 import {ISlidesState} from '../../../store/slide.reducer';
-import {Observable} from 'rxjs';
-import {selectSlides} from '../../../store/slide.selector';
 
 @Component({
   selector: 'app-central-panel',
@@ -10,15 +8,18 @@ import {selectSlides} from '../../../store/slide.selector';
 })
 export class CentralPanelComponent implements OnInit {
 
-  slides: Observable<any[]>;
+  slides = [];
 
   constructor(private store: Store<ISlidesState>) { }
 
   ngOnInit(): void {
+    this.listMessages();
   }
 
   listMessages(): void {
-    this.slides = this.store.pipe(select(selectSlides));
-    console.log(this.slides);
+    this.store.select('slides').subscribe((value: any) => {
+      console.log(value);
+      this.slides = value.slides;
+    });
   }
 }

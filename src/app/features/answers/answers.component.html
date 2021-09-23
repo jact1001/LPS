@@ -4,20 +4,20 @@
         <h2>Preguntas y respuestas</h2>
     </div>
     <h5 class="card-title">A continuación podras configurar tus Preguntas y Respuestas</h5>
-    <form class="form">
+    <form class="form" [formGroup]="slidesForm" >
         <div class="form-group">
             <label for="name">Nombre</label>
-            <input type="email" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">Este nombre solo es para identificar el formulario.</small>
+            <input formControlName="name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="nombre">
+            <small id="namehelp" class="form-text text-muted">Este nombre solo es para identificar el formulario.</small>
         </div>
         <div class="form-group">
             <label for="ask1">Pregunta 1</label>
-            <input type="password" class="form-control" id="ask1" placeholder="Pregunta 1">
+            <input type="text" class="form-control" id="ask1" placeholder="Pregunta 1">
         </div>
         <div class="form-group">
             <label for="ask2">Pregunta 2</label>
-            <input type="password" class="form-control" id="ask2" placeholder="Pregunta 2">
+            <input type="text" class="form-control" id="ask2" placeholder="Pregunta 2">
         </div>
-        <button type="submit" class="btn btn-primary">Añadir</button>
+        <button [disabled]="!slidesForm.valid" type="submit" class="btn btn-primary" (click)="onCreateMessage()">Añadir</button>
     </form>
 </div>

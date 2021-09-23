@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Store} from '@ngrx/store';
 import {ISlidesState} from '../../store/slide.reducer';
 import {addSlideToList} from '../../store/slide.actions';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-answers',
@@ -10,13 +11,23 @@ import {addSlideToList} from '../../store/slide.actions';
 })
 export class AnswersComponent implements OnInit {
 
-  constructor(private store: Store<ISlidesState>) { }
+  slidesForm: FormGroup;
+
+  constructor(
+      private store: Store<ISlidesState>,
+      private fb: FormBuilder,
+  ) {
+    this.slidesForm = this.fb.group({
+      type: ['Preguntas y Respuestas'],
+      name: [null, Validators.required],
+    });
+  }
 
   ngOnInit(): void {
-    this.onCreateMessage();
   }
 
   onCreateMessage(): void {
-    this.store.dispatch(addSlideToList({ slide: {nombre: 'prueba'} }));
+    this.store.dispatch(addSlideToList({ slide: this.slidesForm.value }));
+    this.slidesForm.controls.name.reset();
   }
 }
