@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import {AppComponent} from '../../app.component';
 import {FactoryComponent} from '../../factory/factory.component';
 import {NavbarComponent} from '../../components/shared/navbar/navbar.component';
 import {CentralPanelComponent} from '../../components/shared/central-panel/central-panel.component';
@@ -8,19 +7,17 @@ import {ContainerComponent} from '../../components/shared/container/container.co
 import {EducationComponent} from '../education/education.component';
 import {EnterpriseComponent} from './enterprise.component';
 import {BrowserModule} from '@angular/platform-browser';
-import {AppRoutingModule} from '../../app-routing.module';
+import {AppRoutingModule} from './enterprise-routing.module';
 import {slideReducer} from '../../store/slide.reducer';
 import {StoreModule} from '@ngrx/store';
 
 @NgModule({
   declarations: [
-    AppComponent,
     FactoryComponent,
     NavbarComponent,
     CentralPanelComponent,
     LeftPanelComponent,
     ContainerComponent,
-    EducationComponent,
     EnterpriseComponent,
   ],
   imports: [
@@ -29,6 +26,6 @@ import {StoreModule} from '@ngrx/store';
     StoreModule.forRoot({slides: slideReducer}, {})
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [EnterpriseComponent]
 })
 export class EnterpriseModule { }
