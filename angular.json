@@ -5,7 +5,14 @@
   "projects": {
     "persons": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -65,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "basic:build:production"
+              "browserTarget": "persons:build:production"
             },
             "development": {
-              "browserTarget": "basic:build:development"
+              "browserTarget": "persons:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "splsoft:build"
+            "browserTarget": "persons:build"
           }
         },
         "test": {
@@ -107,24 +114,6 @@
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "splsoft:serve"
-          },
-          "configurations": {
-            "one": {
-              "devServerTarget": "splsoft:serve:one"
-            },
-            "two": {
-              "devServerTarget": "splsoft:serve:two"
-            },
-            "three": {
-              "devServerTarget": "splsoft:serve:three"
-            }
           }
         }
       }
@@ -191,10 +180,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "basic:build:production"
+              "browserTarget": "education:build:production"
             },
             "development": {
-              "browserTarget": "basic:build:development"
+              "browserTarget": "education:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -202,7 +191,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "splsoft:build"
+            "browserTarget": "education:build"
           }
         },
         "test": {
@@ -233,24 +222,6 @@
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "splsoft:serve"
-          },
-          "configurations": {
-            "one": {
-              "devServerTarget": "splsoft:serve:one"
-            },
-            "two": {
-              "devServerTarget": "splsoft:serve:two"
-            },
-            "three": {
-              "devServerTarget": "splsoft:serve:three"
-            }
           }
         }
       }
@@ -317,10 +288,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "basic:build:production"
+              "browserTarget": "enterprise:build:production"
             },
             "development": {
-              "browserTarget": "basic:build:development"
+              "browserTarget": "enterprise:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -328,7 +299,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "splsoft:build"
+            "browserTarget": "enterprise:build"
           }
         },
         "test": {
@@ -359,24 +330,6 @@
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "splsoft:serve"
-          },
-          "configurations": {
-            "one": {
-              "devServerTarget": "splsoft:serve:one"
-            },
-            "two": {
-              "devServerTarget": "splsoft:serve:two"
-            },
-            "three": {
-              "devServerTarget": "splsoft:serve:three"
-            }
           }
         }
       }
