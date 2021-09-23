@@ -1,1 +1,7 @@
+::ng-deep .home a {
+    margin: 0 10px;
+}
 
+::ng-deep .form {
+    text-align: initial !important;
+}

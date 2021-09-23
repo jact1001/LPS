@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import {FactoryComponent} from '../../factory/factory.component';
 import {NavbarComponent} from '../../components/shared/navbar/navbar.component';
 import {CentralPanelComponent} from '../../components/shared/central-panel/central-panel.component';
 import {LeftPanelComponent} from '../../components/shared/left-panel/left-panel.component';
@@ -12,7 +11,6 @@ import {StoreModule} from '@ngrx/store';
 
 @NgModule({
   declarations: [
-    FactoryComponent,
     NavbarComponent,
     CentralPanelComponent,
     LeftPanelComponent,
