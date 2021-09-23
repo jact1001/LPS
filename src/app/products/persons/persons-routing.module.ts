@@ -1,8 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {FactoryComponent} from '../../factory/factory.component';
 
 const routes: Routes = [
-  { path: 'heroes', loadChildren: () => import('../spl-modules/heroes/heroes.module').then(m => m.HeroesModule) }
+  {
+    path: '',
+    component: FactoryComponent,
+    children: [
+      {
+        path: 'encuesta',
+        loadChildren: () => import('../../features/poll/poll.module').then((mod) => mod.PollModule)
+      }
+    ]
+  },
+  { path: '', redirectTo: '', pathMatch: 'full'},
 ];
 
 @NgModule({
