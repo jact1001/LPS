@@ -25,6 +25,7 @@ export class CloudComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // SonarQube: Empty constructor
   }
 
   update(value){

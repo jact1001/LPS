@@ -2,11 +2,11 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 
-import { CloudComponent } from './cloud.component';
+import { AnswersComponent } from './answers.component';
 
-describe('CloudComponent', () => {
-  let component: CloudComponent;
-  let fixture: ComponentFixture<CloudComponent>;
+describe('AnswersComponent', () => {
+  let component: AnswersComponent;
+  let fixture: ComponentFixture<AnswersComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -15,14 +15,14 @@ describe('CloudComponent', () => {
         ReactiveFormsModule,
       ],
       declarations: [
-        CloudComponent
+        AnswersComponent
       ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CloudComponent);
+    fixture = TestBed.createComponent(AnswersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -31,18 +31,9 @@ describe('CloudComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should not updated', () => {
-    expect(component.slidesForm.controls.size.value).toEqual("Tamaño");
-  });
-
-  it('should on update', () => {
-    component.update("Prueba");
-    expect(component.slidesForm.controls.size.value).toEqual("Prueba");
-  });
-
   it('should on create message', () => {
     component.onCreateMessage();
     expect(component).toBeTruthy();
   });
-
+  
 });

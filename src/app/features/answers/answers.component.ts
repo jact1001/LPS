@@ -24,6 +24,7 @@ export class AnswersComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // SonarQube: Empty constructor
   }
 
   onCreateMessage(): void {

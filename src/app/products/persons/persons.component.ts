@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    // SonarQube: Empty constructor
+  }
 
   ngOnInit(): void {
+    // SonarQube: Empty constructor
   }
 
 }
