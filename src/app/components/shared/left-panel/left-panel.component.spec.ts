@@ -1,38 +1,37 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 
-import { PollComponent } from './poll.component';
+import { LeftPanelComponent } from './left-panel.component';
 
-describe('PollComponent', () => {
-  let component: PollComponent;
-  let fixture: ComponentFixture<PollComponent>;
+describe('LeftPanelComponent', () => {
+  let component: LeftPanelComponent;
+  let fixture: ComponentFixture<LeftPanelComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [ 
         StoreModule.forRoot({}),
-        ReactiveFormsModule
+        ReactiveFormsModule,
       ],
-      declarations: [ 
-        PollComponent 
+      declarations: [
+        LeftPanelComponent
+      ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
       ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PollComponent);
+    fixture = TestBed.createComponent(LeftPanelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should on create message', () => {
-    component.onCreateMessage();
     expect(component).toBeTruthy();
   });
 });
